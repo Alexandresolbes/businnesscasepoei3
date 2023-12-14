@@ -1,4 +1,14 @@
 .container .breadcrumb {
     border-radius: 0;
     border-bottom: $border-width solid $grey3;
+    text-decoration: none;
+}
+
+.product-breadcrumb {
+    color: black;
+    text-decoration: none;
+}
+
+.container .breadcrumb a {
+    color: rgb(0, 0, 0);
 }

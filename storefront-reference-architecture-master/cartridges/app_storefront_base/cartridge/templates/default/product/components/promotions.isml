@@ -1,18 +1,23 @@
-<isset name="product" value="${typeof product === 'undefined' || empty(product) ? pdict.product : product}" scope="page" />
+<isset name="product" value="${typeof product === 'undefined' || empty(product) ? pdict.product : product}"
+    scope="page" />
 <isif condition="${product.promotions}">
     <isloop items="${product.promotions}" var="promotion" status="promdet">
-        <div class="row collapsible-xl">
-            <div class="col-12">
-                <button class="title callout btn text-left btn-block"
-                        aria-expanded="false" aria-controls="collapsible-promotion-details-${promdet.index}">
-                    <isprint value="${promotion.calloutMsg}" encoding="off" />
-                </button>
+        <div class="prom">
+            <div class="row">
+                <div class="col-12">
+                    <button class="title callout btn text-left btn-block" aria-expanded="false"
+                        aria-controls="collapsible-promotion-details-${promdet.index}">
+                        <i class="fa-solid fa-circle-info" style="color: #3067c5;"></i>
+                        <isprint value="${promotion.calloutMsg}" encoding="off" />
+                    </button>
+                </div>
+                <iscomment>
+                    <div class="col-12 value content" id="collapsible-promotion-details-${promdet.index}">
+                        <isprint value="${promotion.details}" encoding="off" />
+                    </div>
+                </iscomment>
             </div>
-            <div class="col-12 value content" id="collapsible-promotion-details-${promdet.index}">
-                <isprint value="${promotion.details}" encoding="off" />
             </div>
-        </div>
-        <hr>
     </isloop>
 </isif>
 

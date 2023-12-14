@@ -52,6 +52,7 @@
 
 .cart-and-ipay {
     text-align: center;
+    margin-bottom: 10px;
 
     @include media-breakpoint-only(xs) {
         padding-bottom: 26px;
@@ -86,6 +87,14 @@
 
 div.availability {
     margin-top: 1.071em;
+}
+
+.add-to-cart {
+    margin-bottom: 2%;
+    padding: 2%;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 100%;
 }
 
 .bundle-item {

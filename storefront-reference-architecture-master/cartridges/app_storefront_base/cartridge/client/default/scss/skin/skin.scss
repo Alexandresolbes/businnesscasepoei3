@@ -53,7 +53,8 @@ a {
 }
 
 header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
-    color: var(--skin-primary-color-1);
+    color: black;
+    text-decoration: none;
 }
 
 .price {

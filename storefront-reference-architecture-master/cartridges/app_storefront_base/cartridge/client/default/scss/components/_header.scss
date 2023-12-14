@@ -66,14 +66,24 @@ $menu-item-margin: 0.625em;
     }
 }
 
+
+.img .hidden-md-down {
+    width: 552px;
+    height: 57px;
+}
+
+.logo-home {
+    width: 552px;
+}
+
 .brand {
     position: absolute;
     left: 42%;
     display: block;
-    // text-align: center;
 
     img {
-        width: 60%;
+        width: 552px;
+        height: 57px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -101,6 +111,7 @@ $menu-item-margin: 0.625em;
     color: black;
     justify-content: center;
     display: flex;
+    text-decoration: none;
 
     .navbar .close-menu button,
     .navbar .close-button button {
@@ -117,16 +128,6 @@ $menu-item-margin: 0.625em;
         background-color: white;
         color: black;
     }
-}
-
-.logo-home {
-    width: 10%;
-}
-
-.container-promo {
-    background-color: #e9ecef;
-    color: black;
-    text-align: center;
 }
 
 .header-banner {
@@ -154,8 +155,12 @@ $menu-item-margin: 0.625em;
 }
 
 .minicart {
-    margin-top: 0.1875em; /* 3/16 */
     display: flex;
+    align-items: baseline;
+}
+
+.minicart {
+    margin-top: 0.1875em;
 
     .minicart-icon {
         font-size: 1.5em;

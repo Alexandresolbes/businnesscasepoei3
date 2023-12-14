@@ -53,6 +53,8 @@
 
             .tiered {
                 font-size: 0.875em;
+                color: $primary;
+
 
                 .value {
                     font-weight: bold;
@@ -83,6 +85,7 @@
 
         .ratings {
             font-size: 0.9em;
+            border: none;
         }
     }
 
@@ -160,7 +163,6 @@
     }
 
     .selected-pid {
-        border: 1px solid $grey3;
 
         .bonus-product-name {
             white-space: nowrap;
@@ -173,4 +175,8 @@
         text-align: center;
         margin-top: 1em;
     }
+}
+
+.product-number-rating .clearfix {
+    border: none;
 }

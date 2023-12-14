@@ -83,24 +83,6 @@ label.availability {
     padding-right: 0.3125em;
 }
 
-@include media-breakpoint-up(sm) {
-    .product-number-rating {
-        border-bottom: 1px solid $hr-border-color;
-    }
-}
-
-@include media-breakpoint-up(md) {
-    .product-number-rating {
-        border-top: 1px solid $hr-border-color;
-    }
-}
-
-@include media-breakpoint-only(sm) {
-    .product-name {
-        border-bottom: 1px solid $hr-border-color;
-    }
-}
-
 .product-number-rating .ratings {
 
     @include media-breakpoint-up(sm) {
@@ -126,12 +108,14 @@ label.availability {
     font-weight: normal;
     text-align: center;
     height: 85%;
+    border: none !important;
 
     div.collapsible-xl button.callout {
         font-size: 1.25em;
         padding-bottom: 1.25rem;
         padding-top: 1.25rem;
-        color: $danger;
+        color: $black;
+        border: none;
 
         @include media-breakpoint-up(sm) {
             font-size: 1.375em;
@@ -143,14 +127,17 @@ label.availability {
     }
 }
 
+.prom {
+    border: none !important;
+    background-color: #f1f3f5;
+    width: 100%;
+    left: 42px;
+}
+
 .product-breadcrumb .breadcrumb {
     border-bottom: none;
     margin-left: -1rem;
     margin-bottom: 0;
-
-    @include media-breakpoint-down(md) {
-        border-top: 1px solid $grey3;
-    }
 }
 
 .price {
@@ -189,7 +176,7 @@ label.availability {
 .attributes {
 
     @include media-breakpoint-up(md) {
-        padding-left: 2.5rem;
+        // padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
 }
