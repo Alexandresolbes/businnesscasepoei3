@@ -10,6 +10,7 @@ $menu-item-margin: 0.625em;
 
 .testdiv {
     display: flex;
+    justify-content: space-between;
 }
 
 .brand {
@@ -38,7 +39,7 @@ $menu-item-margin: 0.625em;
 }
 
 img {
-    width: 15%;
+    width: 60%;
 }
 
 .minicart {
