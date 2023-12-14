@@ -1,7 +1,7 @@
 <header>
-        <a class="" href="${URLUtils.url('Home-Show')}"
-            title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
-                   'global.home', 'common', null))}">
+    <div class="testdiv">
+        <a class="" href="${URLUtils.url('Home-Show')}" title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                                                               'global.home', 'common', null))}">
             <img class="" src="${URLUtils.staticURL('/images/logo.svg')}"
                 alt="${Resource.msg('global.storename', 'common', null)}" />
         </a>
@@ -18,13 +18,12 @@
             <isinclude url="${URLUtils.url('Account-Header')}" />
             <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
         </div>
-
-    <div class="main-menu">
-        <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}" />
-    </div>
+</div>
+        <div class="main-menu">
+            <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}" />
+        </div>
 
     <div class="content-promo">
         <isslot id="header-banner-m" description="Slot underneath the site header" context="global" />
     </div>
-
 </header>
