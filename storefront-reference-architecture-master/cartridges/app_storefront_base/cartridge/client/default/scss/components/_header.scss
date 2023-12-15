@@ -11,6 +11,9 @@ $menu-item-margin: 0.625em;
 .testdiv {
     display: flex;
     justify-content: space-between;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .brand {
@@ -55,7 +58,7 @@ img {
     }
 
     a.minicart-link {
-        margin-left: 15px;
+        margin-left: 194px;
         &:hover {
             text-decoration: none;
         }

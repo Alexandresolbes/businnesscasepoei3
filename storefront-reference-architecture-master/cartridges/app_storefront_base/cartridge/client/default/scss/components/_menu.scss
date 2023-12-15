@@ -48,8 +48,9 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
 
 .navbar.bg-inverse {
     background-color: white;
-    padding: 0;
+    padding: 10px;
     color:black;
+    justify-content: center;
 
     @include media-breakpoint-up($next-breakpoint) {
         .navbar-nav .nav-item + .nav-item {
@@ -147,7 +148,10 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
             .dropdown-toggle {
                 padding-left: 1rem;
 
+            &::after {
+                @include caret-right();
             }
+        }
 
             .nav-item .nav-link {
                 padding-left: 1rem;
@@ -182,9 +186,9 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
         }
     }
 
-    // .dropdown-item.dropdown > .dropdown-toggle::after {
-    //     @include caret-right();
-    // }
+    .dropdown-item.dropdown > .dropdown-toggle::after {
+        @include caret-right();
+    }
 
     .dropdown-menu > .dropdown > .dropdown-menu {
 
