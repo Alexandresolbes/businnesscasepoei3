@@ -35,14 +35,10 @@ $menu-item-margin: 0.625em;
 
     }
     @include media-breakpoint-down(sm) {
-        width: 2em; /* 64/16 */
+        width: 2em;
         margin-left: -2em;
         padding-top: 0.8em;
     }
-}
-
-img {
-    width: 60%;
 }
 
 .minicart {
@@ -58,7 +54,7 @@ img {
     }
 
     a.minicart-link {
-        margin-left: 194px;
+        margin-left: 19px;
         &:hover {
             text-decoration: none;
         }

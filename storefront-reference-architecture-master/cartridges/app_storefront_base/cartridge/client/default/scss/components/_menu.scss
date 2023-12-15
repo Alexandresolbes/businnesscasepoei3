@@ -6,25 +6,25 @@ $next-breakpoint: nth(map-keys($grid-breakpoints), $breakpoint-index + 1);
 
 $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
 
-@mixin caret-left() {
-    border-top: 0.3em solid transparent;
-    border-bottom: 0.3em solid transparent;
-    border-right: 0.3em solid;
-    border-left: 0.3 solid transparent;
-    width: 0;
-    height: 0;
-    display: inline-block;
-    margin-bottom: 0.125em;
-}
+// @mixin caret-left() {
+//     border-top: 0.3em solid transparent;
+//     border-bottom: 0.3em solid transparent;
+//     border-right: 0.3em solid;
+//     border-left: 0.3 solid transparent;
+//     width: 0;
+//     height: 0;
+//     display: inline-block;
+//     margin-bottom: 0.125em;
+// }
 
-@mixin caret-right() {
-    border-top: 0.3em solid transparent;
-    border-bottom: 0.3em solid transparent;
-    border-left: 0.3em solid;
-    position: absolute;
-    right: 0.3em;
-    margin-top: 0.55em;
-}
+// @mixin caret-right() {
+//     border-top: 0.3em solid transparent;
+//     border-bottom: 0.3em solid transparent;
+//     border-left: 0.3em solid;
+//     position: absolute;
+//     right: 0.3em;
+//     margin-top: 0.55em;
+// }
 
 @each $size in map-keys($grid-breakpoints) {
 
@@ -145,14 +145,6 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
                 position: static;
             }
 
-            .dropdown-toggle {
-                padding-left: 1rem;
-
-            &::after {
-                @include caret-right();
-            }
-        }
-
             .nav-item .nav-link {
                 padding-left: 1rem;
             }
@@ -186,10 +178,6 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
         }
     }
 
-    .dropdown-item.dropdown > .dropdown-toggle::after {
-        @include caret-right();
-    }
-
     .dropdown-menu > .dropdown > .dropdown-menu {
 
         @include media-breakpoint-up($next-breakpoint) {
@@ -205,27 +193,6 @@ $slide-out-animation: left 0.5s cubic-bezier(0, 1, 0.5, 1);
     .close-menu .back {
         .caret-left {
             @include caret-left();
-        }
-    }
-
-    .dropdown-item {
-        padding: 0 0 0 1em;
-
-        .dropdown-link {
-            display: block;
-            padding: 0.425em 5em 0.425em 0;
-        }
-
-        + .dropdown-item {
-            border-top: 1px solid $close-menu-bg;
-        }
-
-        &.top-category {
-            font-weight: bold;
-
-            > .nav-link {
-                padding-left: 0;
-            }
         }
     }
 }

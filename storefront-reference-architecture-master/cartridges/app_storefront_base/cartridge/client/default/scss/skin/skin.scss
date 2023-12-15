@@ -46,6 +46,7 @@ h1.header.page-title::before {
 .custom-select {
     background-color: var(--skin-selectbox-background-color-1);
     color: var(--skin-selectbox-text-color-1);
+    border: 1px solid black;
 }
 
 a {
@@ -113,7 +114,6 @@ header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
     background-color: var(--skin-primary-color-1);
     border-color: var(--skin-primary-color);
     color: var(--skin-primary-color-invert-1);
-    opacity: 0.5;
 }
 
 .btn-outline-primary {

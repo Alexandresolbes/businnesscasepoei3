@@ -5,6 +5,10 @@
 @import "../utilities/responsiveUtils";
 @import "../utilities/swatch";
 
+.groupdetails {
+    display: block;
+}
+
 .product-detail .attributes .swatch-circle {
     // $white will be replaced by color image background in ISML
     @include swatch(2.5em, $white);
@@ -26,6 +30,10 @@ label.color ~ a:hover {
 
 .description-and-detail {
     margin-top: 2em;
+    margin-left: 4em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
 
     @include media-breakpoint-only(xs) {
         margin-top: 0;
@@ -171,14 +179,6 @@ label.availability {
 .non-input-label {
     display: block;
     margin-bottom: 0.5rem;
-}
-
-.attributes {
-
-    @include media-breakpoint-up(md) {
-        // padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
 }
 
 .product-grid {
