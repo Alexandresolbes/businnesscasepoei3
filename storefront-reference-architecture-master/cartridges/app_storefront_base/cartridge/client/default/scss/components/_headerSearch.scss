@@ -45,9 +45,9 @@
     }
 }
 
-// .suggestions-wrapper {
-//     position: relative;
-// }
+.suggestions-wrapper {
+    position: relative;
+}
 
 .suggestions {
     display: block;
@@ -56,7 +56,7 @@
     background-color: $white;
     top: 0;
     right: 0;
-    width: 21.875rem;
+    width: 100%;
     z-index: 3;
 
     @include media-breakpoint-only(xs) {
