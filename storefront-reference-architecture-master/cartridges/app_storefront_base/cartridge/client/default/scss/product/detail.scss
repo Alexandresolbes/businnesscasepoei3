@@ -140,6 +140,11 @@ label.availability {
     background-color: #f1f3f5;
     width: 100%;
     left: 42px;
+
+    .btn {
+        font-weight: 600;
+        padding: 2%;
+    }
 }
 
 .product-breadcrumb .breadcrumb {

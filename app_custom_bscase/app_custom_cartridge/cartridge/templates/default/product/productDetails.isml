@@ -62,7 +62,6 @@
                 <div class="attributes">
                     <!-- Attributes and Quantity -->
                     <isinclude template="product/components/mainAttributes" />
-
                     <isset name="isBundle" value="${false}" scope="page" />
                     <isset name="loopState" value="${{
                                                    count: 1}}" scope="page" />

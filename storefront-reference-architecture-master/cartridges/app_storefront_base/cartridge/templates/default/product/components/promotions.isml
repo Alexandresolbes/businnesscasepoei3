@@ -7,7 +7,7 @@
                 <div class="col-12">
                     <button class="title callout btn text-left btn-block" aria-expanded="false"
                         aria-controls="collapsible-promotion-details-${promdet.index}">
-                        <i class="fa-solid fa-circle-info" style="color: #3067c5;"></i>
+                        <i class="fa fa-info-circle" style="color: #3067c5;"></i>
                         <isprint value="${promotion.calloutMsg}" encoding="off" />
                     </button>
                 </div>
