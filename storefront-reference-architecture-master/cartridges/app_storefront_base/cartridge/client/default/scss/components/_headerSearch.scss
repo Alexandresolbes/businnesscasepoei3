@@ -8,6 +8,7 @@
 
     @include media-breakpoint-up(xl) {
         width: 33em;
+        margin-left: 12em;
     }
 
     @include media-breakpoint-only(md) {

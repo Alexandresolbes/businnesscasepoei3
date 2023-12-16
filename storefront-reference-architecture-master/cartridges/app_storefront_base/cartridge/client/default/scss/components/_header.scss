@@ -14,16 +14,23 @@ $menu-item-margin: 0.625em;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    .fa-user {
+        font-size: 1.5em;
+    }
+
+    .user {
+        padding-right: 10px;
+    }
 }
 
 .brand {
-    position: absolute;
-    left: 42%;
     display: block;
 
     @include media-breakpoint-up(lg) {
         width: 10%;
-        margin-left: 10%;
         padding-top: 0.5em;
     }
 
