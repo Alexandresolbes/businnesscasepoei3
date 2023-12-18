@@ -7,6 +7,25 @@
 $spacer: 0.625em;
 $negative-spacer: -0.625rem;
 
+.productcardd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 175px;
+}
+
+.contenu {
+    justify-content: space-between;
+}
+
+.contcartitem {
+    width: 93%;
+}
+
+.line-item-quantity {
+    padding-top: 8px;
+}
+
 .single-approaching-discount {
     border: 1px solid rgba(0, 0, 0, 0.125);
     background-color: $white;
@@ -42,7 +61,6 @@ $negative-spacer: -0.625rem;
 }
 
 .product-edit {
-    margin-top: auto;
 
     a {
         font-size: 0.813em;
@@ -105,6 +123,11 @@ $negative-spacer: -0.625rem;
 .product-info {
     margin-bottom: 0.313em;
     padding: $spacer;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 730px;
+    height: 48%;
 
     @include media-breakpoint-up(md) {
         height: auto;
@@ -125,7 +148,7 @@ $negative-spacer: -0.625rem;
     img.product-image {
         display: block;
         margin: 0 auto;
-        max-width: 100%;
+        max-width: 150%;
         height: auto;
         max-height: 5.625em;
     }

@@ -1,5 +1,5 @@
 <div class="quantity-form">
-    <label class="line-item-pricing-info quantity-label" for="quantity-${lineItem.UUID}">${Resource.msg('field.selectquantity','cart',null)}</label>
+    <iscomment> <label class="line-item-pricing-info quantity-label" for="quantity-${lineItem.UUID}">${Resource.msg('field.selectquantity','cart',null)}</label> </iscomment>
     <select class="form-control quantity custom-select"
             data-uuid="${lineItem.UUID}"
             data-pid="${lineItem.id}"
