@@ -12,3 +12,6 @@
         <isinclude template="/product/components/pricing/default" />
     </div>
 </isif>
+<noscript>
+
+</noscript>
