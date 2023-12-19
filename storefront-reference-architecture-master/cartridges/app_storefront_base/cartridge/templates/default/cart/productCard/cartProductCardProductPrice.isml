@@ -1,6 +1,6 @@
 <div class="col-lg-7 product-card-footer">
     <isif condition="${!lineItem.isBonusProductLineItem}"/>
-        <div class="row">
+        <div class="row infopricequantity">
             <!---item price--->
             <iscomment> <div class="col-4 line-item-price-${lineItem.UUID}">
                 <p class="line-item-price-info">${Resource.msg('label.each.item.price','cart',null)}</p>

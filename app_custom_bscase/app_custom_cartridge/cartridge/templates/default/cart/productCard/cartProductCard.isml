@@ -10,6 +10,7 @@
     </div>
     <div class="contcartitem row ${bonuslineitemrow}">
         <isinclude template="cart/productCard/cartProductCardHeader" />
+        <hr class="separator-cart">
         <div class="contenu d-flex">
             <div class="item-attributes d-flex flex-column">
                 <isloop items="${lineItem.variationAttributes}" var="attribute">
