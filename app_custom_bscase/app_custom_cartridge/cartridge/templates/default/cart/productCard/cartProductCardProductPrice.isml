@@ -1,65 +1,37 @@
 <div class="col-lg-7 product-card-footer">
-    <isif condition="${!lineItem.isBonusProductLineItem}" />
-    <div class="row">
-        <div class="line-item-header">
-            <isif condition=${miniCart}>
-                <isinclude template="checkout/productCard/productCardProductNameAndRemove" />
-                <iselse>
-                    <isinclude template="checkout/productCard/productCardProductName" />
-            </isif>
-        </div>
-        <div class="item-attributes d-flex flex-column">
-            <isloop items="${lineItem.variationAttributes}" var="attribute">
-                <p class="line-item-attributes ${attribute.displayName}-${lineItem.UUID}">${attribute.displayName}:
-                    ${attribute.displayValue}</p>
-            </isloop>
-            <isloop items="${lineItem.options}" var="option">
-                <isif condition="${!!option}" />
-                <div class="lineItem-options-values" data-option-id="${option.optionId}"
-                    data-value-id="${option.selectedValueId}">
-                    <p class="line-item-attributes">${option.displayName}</p>
-                </div>
-                </isif>
-            </isloop>
-
-            <isinclude template="cart/productCard/cartProductCardAvailability" />
-            <isinclude template="cart/productCard/cartProductCardEdit" />
-        </div>
-        <!---item price--->
-        <iscomment>
-            <div class="col-4 line-item-price-${lineItem.UUID}">
-                <p class="line-item-price-info">${Resource.msg('label.each.item.price', 'cart', null)}</p>
-                <isset name="price" value="${lineItem.price}" scope="page" />
+    <isif condition="${!lineItem.isBonusProductLineItem}"/>
+        <div class="row infopricequantity">
+            <!---item price--->
+            <iscomment> <div class="col-4 line-item-price-${lineItem.UUID}">
+                <p class="line-item-price-info">${Resource.msg('label.each.item.price','cart',null)}</p>
+                <isset name="price" value="${lineItem.price}" scope="page"/>
                 <div class="unit-price">
                     <isinclude template="/product/components/pricing/main" />
                 </div>
-            </div>
-        </iscomment>
+            </div> </iscomment>
 
-        <!--- quantity --->
-        <div class="col-4 col-lg-3 line-item-quantity">
-            <isinclude template="checkout/productCard/productCardQuantitySelector" />
+            <!--- quantity --->
+            <div class="col-4 col-lg-3 line-item-quantity">
+                <isinclude template="checkout/productCard/productCardQuantitySelector" />
+            </div>
+
+            <!--- line item total price --->
+            <div class="col-4 line-item-total-price">
+                <iscomment> <p class="line-item-price-info">
+                    ${Resource.msg('label.total.price','cart',null)}
+                </p> </iscomment>
+                <div class="item-total-${lineItem.UUID} price">
+                    <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+                </div>
+            </div>
+
+            <!--- extra slot for spacing reasons due to large remove button --->
+            <iscomment> <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div> </iscomment>
         </div>
 
-        <!--- line item total price --->
-        <div class="col-4 line-item-total-price">
-            <p class="line-item-price-info">
-                ${Resource.msg('label.total.price', 'cart', null)}
-            </p>
-            <div class="item-total-${lineItem.UUID} price">
-                <isinclude template="checkout/productCard/productCardProductTotalPrice" />
-            </div>
-        </div>
-
-        <!--- extra slot for spacing reasons due to large remove button --->
-        <iscomment>
-            <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
-        </iscomment>
-    </div>
-
-    <!--- promotions --->
-    <div class="line-item-promo item-${lineItem.UUID}">
-        <isinclude template="checkout/productCard/productCardProductPromotions" />
-    </div>
+        <!--- promotions --->
+        <iscomment> <div class="line-item-promo item-${lineItem.UUID}">
+            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        </div> </iscomment>
     </isif>
 </div>
