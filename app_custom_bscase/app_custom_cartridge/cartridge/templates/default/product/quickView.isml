@@ -1,0 +1,114 @@
+<isset name="productCopy" value="${pdict.product}" scope="page"/>
+<isset name="product" value="${pdict.product}" scope="page"/>
+<isset name="isBundle" value="${false}" scope="page"/>
+<isset name="isQuickView" value="${true}" scope="page"/>
+<isset name="isProductSet" value="${false}" scope="page" />
+<isset name="loopState" value="${{count: 1}}" scope="page" />
+<div class="product-quickview product-${product.productType} col product-wrapper product-detail" data-pid="${product.id}">
+    <div class="row">
+        <!-- Product Images Carousel -->
+        <isinclude template="product/components/imageCarousel" />
+
+        <!-- Product Name and Number -->
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col">
+                    <section>
+                        <h1 class="product-name">${product.productName}</h1>
+                    </section>
+                </div>
+            </div>
+
+            <div class="detail-panel">
+                <!-- Attributes -->
+                <section class="attributes">
+
+                    <isinclude template="product/components/mainAttributes" />
+                      <isset name="hasVariationAttributes" value="false" scope="page" />
+                         <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                            <div data-attr="${attr.id}" class="swatch row mb-2">
+
+                                <div class="col-6">
+                                    <isinclude template="product/components/variationAttribute" />
+
+                                </div>
+
+                                <isif condition="${attributeStatus.last}">
+                                    <!-- Quantity Drop Down Menu -->
+                                     <div class="attribute quantity col-4">
+                                        <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
+                                            <isinclude template="product/components/quantity" />
+                                        </isif>
+                                    </div>
+                                </isif>
+                            </div>
+                        </isloop>
+
+
+                        <div class="d-sm-none row availability align-self-end " data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+                            <isinclude template="product/components/availability" />
+                        </div>
+
+                        <div class="col-12 mx-auto">
+                <!-- Prices -->
+                <div class="prices">
+                    <isset name="price" value="${product.price}" scope="page" />
+                    <isinclude template="product/components/pricing/main" />
+                </div>
+                </div>
+
+                <div class="row detail-availability">
+                    <i class="fa fa-solid fa-circle"></i>
+                    <p class="msg-danger">This item is currently not available</p>
+                </div>
+
+
+                <div class="notify-container">
+                  <button type="button" class="btn btn-primary btn lg btn-block">NOTIFY ME WHEN PRODUCT IS AVAILABLE</button>
+                </div>
+
+                    <!-- Applicable Promotions -->
+                    <div class="row">
+                        <div class="col-12 promotions">
+                            <div class="align-self-center">
+                                <isinclude template="product/components/promotions" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <isif condition="${product.productType !== 'bundle'}">
+                    <!-- Options -->
+                    <isif condition="${product.options && product.options.length > 0}">
+                            <isinclude template="product/components/options" />
+                    </isif>
+                </isif>
+            </div>
+        </div>
+    </div>
+
+    <isif condition="${product.productType === 'bundle'}">
+        <div class="hidden-xs-down">
+            <hr>
+        </div>
+        <isinclude template="product/components/bundleItems" />
+
+        <hr>
+
+        <!-- Quantity Drop Down Menu -->
+        <div class="row d-sm-none">
+            <div class="quantity col-10 mx-auto">
+                <isinclude template="product/components/quantity" />
+            </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="row d-sm-none">
+            <div class="col-11 mx-auto availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+                <isinclude template="product/components/availability" />
+            </div>
+        </div>
+    </isif>
+
+    <isset name="product" value="${productCopy}" scope="page"/>
+</div>
